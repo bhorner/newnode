@@ -3,6 +3,7 @@ $text-color: #555;
 body{
   margin:0;
   font-family: 'Helvetica Neue', sans-serif;
+  padding:80px;
   h1{
     margin:0 auto;
     z-index:0;
@@ -14,7 +15,6 @@ body{
     color: $primary-color;
   }
   h1, iframe{
-    width:500px;
     margin:0 auto;
   }
   a {
