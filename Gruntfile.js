@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -14,8 +15,8 @@ module.exports = function(grunt) {
     },
         
     watch: {
-		files: ['public/js/**/*.js'],
-		tasks: ['uglify']
+  		files: ['public/js/**/*.js'],
+  		tasks: ['uglify']
     },
     
     'ftp-deploy': {
@@ -39,6 +40,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ftp-deploy');
 
   // Default task(s).
-	grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify']);
+
 
 };
