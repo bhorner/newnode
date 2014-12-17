@@ -1,3 +1,4 @@
 $(document).ready(function() {
-    $('body').fadeIn(2000);
+    $('body').fadeIn(3000);
+    $('p').addClass('red');
 });

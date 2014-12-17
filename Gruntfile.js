@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-	
+  
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -15,19 +15,19 @@ module.exports = function(grunt) {
     },
         
     watch: {
-  		files: ['public/js/**/*.js'],
-  		tasks: ['uglify']
+      files: ['public/js/**/*.js'],
+      tasks: ['uglify']
     },
     
     'ftp-deploy': {
       build: {
         auth: {
-          host: 'bhorner.com',
+          host: 's75347.gridserver.com',
           port: 21,
           authKey: 'key1'
         },
         src: 'public/',
-        dest: '/deploy/',
+        dest: '/domains/madhousedev.com/html/deploy/',
         exclusions: ['path/to/source/folder/**/.DS_Store', 'path/to/source/folder/**/Thumbs.db', 'path/to/dist/tmp']
       }
     }
@@ -35,8 +35,8 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin that provides the "uglify" task.
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
 
   // Default task(s).
